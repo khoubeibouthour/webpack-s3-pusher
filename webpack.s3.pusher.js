@@ -77,6 +77,8 @@ S3PusherPlugin.prototype.removeSlashes = function(str) {
 };
 
 S3PusherPlugin.prototype.upload = function(filename, content) {
+  this.log(filename);
+
   return new Promise((resolve, reject) => {
     let params = {
       Bucket: this.bucket, 
