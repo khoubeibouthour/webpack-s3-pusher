@@ -26,9 +26,7 @@ function S3PusherPlugin(options) {
     this.exclude = new RegExp(options.exclude);
   }
 
-  if (options.quiet) {
-    this.quiet = options.quiet
-  }
+  this.quiet = options.quiet || false;
 
   if (options.key && options.secret && options.region) {
     const config = {
