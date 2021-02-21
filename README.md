@@ -2,6 +2,10 @@
 All credits to Oliver Green  
 Original work [olsgreen/webpack-s3-pusher](https://github.com/olsgreen/webpack-s3-pusher.git)
 
+## Changes
+This fork allows passing the endpoint as option to facilitate connecting to AWS compatible providers like DigitalOcean.  
+In addition, you can now pass the desired ACL to be applied to the uploaded files. By default, some providers set the file visibility to **private** which contradicts with the need of pushing content to CDN for high availability. Now the user can set the option **acl** to **public-read** to force public visibility.
+
 # webpack-s3-pusher
 A webpack plugin that pushes your packed assets to your S3 bucket, no more, no less.
 
