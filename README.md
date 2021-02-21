@@ -1,3 +1,7 @@
+## Source & Credits
+All credits to Oliver Green  
+Original work [olsgreen/webpack-s3-pusher](https://github.com/olsgreen/webpack-s3-pusher.git)
+
 # webpack-s3-pusher
 A webpack plugin that pushes your packed assets to your S3 bucket, no more, no less.
 
