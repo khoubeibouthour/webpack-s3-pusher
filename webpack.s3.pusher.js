@@ -83,7 +83,8 @@ S3PusherPlugin.prototype.upload = function(filename, content) {
     let params = {
       Bucket: this.bucket, 
       Key: filename, 
-      Body: content
+      Body: content,
+      ACL: this.acl
     };
 
     let contentType = mime.lookup(filename)
