@@ -41,6 +41,8 @@ You can also use a credentials file from AWS rather than passing the
 	APP_ASSETS_AWS_SECRET=your_secret
 	APP_ASSETS_AWS_REGION=your_region
 	APP_ASSETS_AWS_BUCKET=your_bucket
+	APP_ASSETS_AWS_ENDPOINT=your_endpoint
+	APP_ASSETS_AWS_ACL=your_acl
 	APP_CDN_URL=http://my-bucket.s3-website.eu-west-2.amazonaws.com
 	
 webpack.mix.js:

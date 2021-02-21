@@ -31,11 +31,17 @@ function S3PusherPlugin(options) {
   }
 
   if (options.key && options.secret && options.region) {
-    AWS.config.update({
-      accessKeyId: options.key, 
-      secretAccessKey: options.secret, 
+    const config = {
+      accessKeyId: options.key,
+      secretAccessKey: options.secret,
       region: options.region
-    })  
+    };
+
+    if (options.endpoint) {
+      config.endpoint = options.endpoint;
+    }
+
+    AWS.config.update(config);
   }
 
   s3 = new AWS.S3();
@@ -43,6 +49,9 @@ function S3PusherPlugin(options) {
   if (options.remove) {
     this.removePaths(options.remove)
   }
+
+  // options.acl can be 'private' or 'public-read'
+  this.acl = options.acl || 'private';
 }
 
 S3PusherPlugin.prototype.removePaths = function(paths) {
